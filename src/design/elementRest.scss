@@ -1,0 +1,29 @@
+@import '~@/design/_handler.scss';
+
+.el-menu{
+  border-right: 0;
+}
+.el-submenu__title, .el-menu-item{
+  @include bg-color('bg-color-default');
+}
+.el-popper.is-dark{
+  @include bg-color('bg-color-default');
+  @include color('text-color-default');
+  @include border-color('bg-color-default-heavy');
+  border: 1px solid;
+
+}
+.el-popper__arrow, .el-popper__arrow::before{
+  @include border-color('bg-color-default-heavy');
+  @include bg-color('bg-color-default');
+}
+.el-popper__arrow::before{
+  border-top: 1px solid!important;
+  border-left: 1px solid!important;
+}
+.menu-title{
+  @include color('text-color-default');
+}
+.el-menu--popup, .el-menu--popup-right-start{
+  @include bg-color('bg-color-default');
+}

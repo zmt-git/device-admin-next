@@ -1,0 +1,29 @@
+$themes: (
+  dark: (
+    border-color-default: #1abfec,
+    border-color-disabled: #98e6fc,
+
+    text-color-default: #1abfec,
+    text-color-default-light: #9fe6fa,
+    text-color-disabled: #98e6fc,
+
+    bg-color-default:  rgba(22, 56, 120, 1),
+    bg-color-default-light: rgba(22, 56, 120, 1),
+    bg-color-default-heavy: rgba(17, 51, 117, 1),
+    bg-color-default-disabled: rgb(47, 85, 161)
+  ),
+
+  light: (
+    border-color-default: rgb(173, 173, 173),
+    border-color-disabled: rgb(235, 234, 234),
+
+    text-color-default: rgb(46, 46, 46),
+    text-color-default-light: rgb(167, 166, 166),
+    text-color-disabled: rgb(143, 142, 142),
+
+    bg-color-default: #f0f0f0,
+    bg-color-default-light:#e0e0e0,
+    bg-color-default-heavy: #cecccc,
+    bg-color-default-disabled: #f0f0f0a4
+  ),
+);

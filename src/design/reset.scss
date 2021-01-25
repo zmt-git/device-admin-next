@@ -1,0 +1,88 @@
+:root {
+  --animate-duration: 500ms;
+  --animate-delay: 0.9s;
+}
+html, body{ width: 100%; height: 100%; font-size: 14px; }
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+
+address, cite, dfn, em, var { font-style:normal; }
+
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+
+small{ font-size:12px; }
+
+ul, ol { list-style:none; }
+
+a { text-decoration:none; color: #000; }
+
+sup { vertical-align:text-top; }
+
+sub{ vertical-align:text-bottom; }
+
+legend { color:#000; }
+
+fieldset, img { border:0; }
+
+button, input, select, textarea { font-size:100%; }
+
+table { border-collapse:collapse; border-spacing:0; }
+
+/* 设置滚动条样式 (不支持火狐)*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+}
+/*外层轨道。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果*/
+::-webkit-scrollbar-track {
+  width: 6px;
+  background-color: #e4e2e3;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+  display: none;
+}
+/*滚动条的设置*/
+::-webkit-scrollbar-thumb {
+  background-color: #e4e2e3;
+  background-clip: padding-box;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+/* 鼠标移入滚动条 */
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+#app{ height: 100%; width: 100%; }
+.plr15{
+  padding: 0 15px;
+}
+.bg::before{
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url('../assets/bg/loginBg.png');
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: .1;
+}
+.custom-dialog{
+  background-color: rgba(130,135,155,.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
