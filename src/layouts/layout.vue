@@ -79,15 +79,20 @@ export default defineComponent({
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .main{
   flex: 1;
+  overflow: auto;
   & div{
     position: relative;
     width: 100%;
     height: 100%;
-    // @include bg-color('bg-color-default');
+    @include bg-color('bg-color-default');
     @include color('text-color');
+    box-sizing: border-box;
+    padding: 10px;
+    overflow: auto;
   }
 }
 </style>

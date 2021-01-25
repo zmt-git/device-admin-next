@@ -63,6 +63,8 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   border-right: 1px solid;
+  flex-grow: 0;
+  flex-shrink: 0;
   @include bg-color('bg-color-default');
   @include border-color('border-color-default');
   @include color('text-color-default');
@@ -85,7 +87,7 @@ export default defineComponent({
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid;
+  // border-bottom: 1px solid;
   @include color('text-color-default');
   @include border-color('border-color-default');
   padding: 0 20px;
