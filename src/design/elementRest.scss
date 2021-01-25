@@ -9,12 +9,12 @@
 .el-popper.is-dark{
   @include bg-color('bg-color-default');
   @include color('text-color-default');
-  @include border-color('bg-color-default-heavy');
+  @include border-color('border-color-default');
   border: 1px solid;
 
 }
 .el-popper__arrow, .el-popper__arrow::before{
-  @include border-color('bg-color-default-heavy');
+  @include border-color('border-color-default');
   @include bg-color('bg-color-default');
 }
 .el-popper__arrow::before{
