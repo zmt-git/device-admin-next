@@ -4,5 +4,5 @@
 
 <style lang="scss">
 // new
-@import url('//at.alicdn.com/t/font_2336078_t3jptbla3bc.css');
+@import url('//at.alicdn.com/t/font_2336078_svyy95ozop.css');
 </style>
