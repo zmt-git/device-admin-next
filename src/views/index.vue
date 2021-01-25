@@ -1,21 +1,34 @@
 <template>
   <div class="index">
+    <search @reset="reset" @confirm='confirm'>
+      <el-form :inline='true' size='small'>
+        <el-form-item label="测试">
+          <el-input v-model="searchValue" autocomplete="off"></el-input>
+        </el-form-item>
+      </el-form>
+    </search>
   </div>
 </template>
 
 <script lang="ts">
+import Search from '@/components/search/search.vue'
 import { defineComponent, ref } from 'vue'
 export default defineComponent({
+  components: { Search },
   setup () {
-    const show = ref(true)
+    const searchValue = ref('')
+    function reset () {
+      console.log(searchValue.value)
+    }
 
-    function tig () {
-      show.value = !show.value
+    function confirm () {
+      console.log(searchValue.value)
     }
 
     return {
-      tig,
-      show
+      confirm,
+      reset,
+      searchValue
     }
   }
 })
