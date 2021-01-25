@@ -8,22 +8,38 @@
     <screen-saver :show='screensaver' @close='screensaver = false'></screen-saver>
     <!-- 用户信息 -->
     <userinfo :show='infoShow' @close='infoShow = false'></userinfo>
-    <!--  -->
+    <!-- 折叠菜单 -->
     <el-tooltip class="item" effect="dark" :content="title" placement="bottom">
       <i class="header-icon" :class="iconName" @click="setIconName"></i>
     </el-tooltip>
-    <div>
-      <!-- 锁屏 -->
-      <el-tooltip class="item" effect="dark" :content="t('lock')" placement="bottom">
-        <i class="iconfont icon-suo2 header-item" @click="lockFn"></i>
-      </el-tooltip>
 
+    <div class="header-right">
       <!-- 搜索 -->
       <el-tooltip class="item" effect="dark" :content="t('search')" placement="bottom">
         <i class="iconfont icon-sousuo header-item" @click="searchFn"></i>
       </el-tooltip>
 
-      <!-- 国际化 -->
+      <!-- 锁屏 -->
+      <el-tooltip class="item" effect="dark" :content="t('lock')" placement="bottom">
+        <i class="iconfont icon-suo2 header-item" @click="lockFn"></i>
+      </el-tooltip>
+
+      <!-- 通知 -->
+      <el-tooltip class="item" effect="dark" :content="t('notice')" placement="bottom">
+        <i class="iconfont icon-fuhao-tongzhi header-item"></i>
+      </el-tooltip>
+
+      <!-- 全屏 -->
+      <el-tooltip class="item" effect="dark" :content="t(screenKey)" placement="bottom">
+        <i class="iconfont header-item" :class="screenIcon" @click="toggleFullscreen"></i>
+      </el-tooltip>
+
+      <!-- 用户 -->
+      <el-tooltip class="item" effect="dark" :content="t('user')" placement="bottom">
+        <i class="iconfont icon-yonghu1 header-item" @click="setInfoShow"></i>
+      </el-tooltip>
+
+       <!-- 国际化 -->
       <el-dropdown trigger="click">
         <el-tooltip class="item" effect="dark" :content="t('globalization')" placement="bottom">
           <span class="el-dropdown-link">
@@ -36,21 +52,6 @@
           </el-dropdown-menu>
         </template>
       </el-dropdown>
-
-      <!-- 全屏 -->
-      <el-tooltip class="item" effect="dark" :content="t(screenKey)" placement="bottom">
-        <i class="iconfont header-item" :class="screenIcon" @click="toggleFullscreen"></i>
-      </el-tooltip>
-
-      <!-- 通知 -->
-      <el-tooltip class="item" effect="dark" :content="t('notice')" placement="bottom">
-        <i class="iconfont icon-tongzhi1 header-item"></i>
-      </el-tooltip>
-
-      <!-- 用户 -->
-      <el-tooltip class="item" effect="dark" :content="t('user')" placement="bottom">
-        <i class="iconfont icon-yonghu1 header-item" @click="setInfoShow"></i>
-      </el-tooltip>
     </div>
   </div>
 </template>
@@ -187,7 +188,6 @@ export default defineComponent({
   height: 50px;
   box-sizing: border-box;
   padding-left: 10px;
-  padding-right: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -208,5 +208,9 @@ export default defineComponent({
   margin: 0 5px;
   cursor: pointer;
   font-size: 18px;
+}
+.header-right{
+  display: flex;
+  flex-wrap: nowrap;
 }
 </style>
