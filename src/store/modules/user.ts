@@ -28,6 +28,7 @@ class User extends VuexModule {
       getUserInfo()
         .then(res => {
           this.commitUserInfo(res.result)
+          resolve(res)
         })
         .catch(e => reject(e))
     })
